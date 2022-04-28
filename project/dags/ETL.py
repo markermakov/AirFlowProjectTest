@@ -5,7 +5,6 @@ try:
     from datetime import date, datetime, timedelta
     import requests
     from time import sleep
-    import pandas as pd
     import json
     import psycopg2
     print("All modules were imported successfully")
@@ -25,7 +24,7 @@ def main():
     conn = psycopg2.connect(
         database="postgres",
         user='markermakov',
-        password='Njvcr123',
+        password='admin',
         host='host.docker.internal',
         port='5432'
     )
@@ -50,5 +49,4 @@ with DAG (
     main = PythonOperator(
         task_id="main",
         python_callable=main,
-
     )
