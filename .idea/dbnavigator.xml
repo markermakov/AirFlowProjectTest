@@ -28,15 +28,16 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="894205dd-990a-4db5-8a91-4dc732a1a8ad">
-      <console name="Test" type="STANDARD" schema="public" session="Main"><![CDATA[CREATE TABLE information_schema.ETL_test (
+      <console name="Test" type="STANDARD" schema="public" session="Main"><![CDATA[CREATE TABLE "public".ETL_test (
 	currency_pair VARCHAR NOT NULL,
 	created_on TIMESTAMP NOT NULL,
 	current_rate decimal not null 
 );
 
-select * from "public".etl_test
+select * from "public".etl_test;
 
-truncate table "public".etl_test]]></console>
+DELETE FROM "public".etl_test
+WHERE currency_pair = 'BTC/USD';]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -92,7 +93,7 @@ truncate table "public".etl_test]]></console>
           <database value="postgres" />
           <type value="USER_PASSWORD" />
           <user value="markermakov" />
-          <deprecated-pwd value="Tmp2Y3IxMjM=" />
+          <deprecated-pwd value="YWRtaW4=" />
         </database>
         <properties>
           <auto-commit value="false" />
