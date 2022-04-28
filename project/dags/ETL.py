@@ -36,7 +36,7 @@ def main():
 
 with DAG (
     dag_id="ETL",
-    schedule_interval="* */3 * * *",
+    schedule_interval="0 */3 * * *",
     default_args={
         "owner": "airflow",
         "retries": 1,
