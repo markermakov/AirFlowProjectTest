@@ -4,9 +4,9 @@ services:
   postgres:
     image: postgres:9.6
     environment:
-      - POSTGRES_USER=airflow
-      - POSTGRES_PASSWORD=airflow
-      - POSTGRES_DB=airflow
+      - POSTGRES_USER=markermakov
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres
     logging:
       options:
         max-size: 10m
