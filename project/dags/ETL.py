@@ -5,6 +5,7 @@ try:
     from datetime import date, datetime, timedelta
     import requests
     from time import sleep
+    import pandas as pd
     import json
     import psycopg2
     print("All modules were imported successfully")
@@ -32,6 +33,8 @@ def main():
     cursor = conn.cursor()
     cursor.execute("INSERT into public.""etl_test""(currency_pair, created_on, current_rate) VALUES (%s, %s, %s)", listToPg)
     conn.commit()
+    my_table = pd.read_sql("select * from public.""etl_test""", conn)
+    print(my_table.tail(5))
     conn.close()
 
 with DAG (
